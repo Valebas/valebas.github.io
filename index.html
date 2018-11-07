@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Название сайта - Главная</title>
+
+  <meta name="keywords" content=".">
+  <!--1.Условие. description заменить инфой из ТЗ заказчика или оставить пустым-->
+  <meta name="description" content="Купить или заказать. Название продукта, товара. Цена такая-то. Причем слово цена важна. Название магазина">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--2.Условие. Если нужно поддерживать IE 9 или IE 8 расскомментировать. Edge это не название браузера-->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+  <meta name="format-detection" content="telephone=no">
+
+  <!--3.Условие. Нужна только после deploy сайта на сервер, когда будет известен домен. От content в og:image будет зависить как будет отображаться картинка (ссылка) на этот сайт в мобильном (в том числе на рабочем экране) или соцсетях-->
+  <meta property="og:image" content="path/to/image.jpg">
+
+  <!--4.Условие. Перед deploy убрать локальный адрес из url favicon и заменить на реальный адрес. В идеале они должны лежать на уровне index.html. И не забыть их сделать впринципе-->
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="http://localhost:5555/img/favicon/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="http://localhost:5555/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://localhost:5555/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://localhost:5555/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="http://localhost:5555/img/favicon/apple-touch-icon-152x152.png"> -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:5555/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:5555/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:5555/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!--5.Условие. Как правило соответствует основному фоновыму оттенку body or brand - речь идет о цвете панели сайта в мобильном. Проверить можно только после deploy на сервер -->
+  <!-- Chrome, Firefox OS and Opera -->
+	<!-- <meta name="theme-color" content="#000"> -->
+	<!-- Windows Phone -->
+	<!-- <meta name="msapplication-navbutton-color" content="#000"> -->
+	<!-- iOS Safari -->
+	<!-- <meta name="apple-mobile-web-app-status-bar-style" content="#000"> -->
+
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="wrap__header">
+
+      <div class="header__logo">
+        <img src="img/logo.svg" alt="Школа Трафика" width="195" height="auto">
+      </div>
+
+      <div class="header__text">
+        <span class="header__text--sub-text">Видеокурс</span>
+        <h1>
+          <span class="header__text--quote-start">Вступление</span> в товарный
+          арбитраж <span class="header__text--quote-end">трафика</span>
+        </h1>
+        <p>Получи бесплатный видеокурс<br> по товарному арбитражу для новичков</p>
+      </div>
+
+      <form class="form" action="index.html" method="post">
+        <input type="email" name="" value="" placeholder="введите ваш e-mail" class="form__input" required>
+        <a href="#" class="btn form__btn" download="Курс">Скачать видео курс</a>
+      </form>
+
+    </div>
+  </header>
+
+
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>
