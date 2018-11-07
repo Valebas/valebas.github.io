@@ -2,240 +2,72 @@
 <html lang="ru">
 <head>
   <meta charset="UTF-8">
-  <title>Pink</title>
+  <title>Название сайта - Главная</title>
+
+  <meta name="keywords" content=".">
+  <!--1.Условие. description заменить инфой из ТЗ заказчика или оставить пустым-->
+  <meta name="description" content="Купить или заказать. Название продукта, товара. Цена такая-то. Причем слово цена важна. Название магазина">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--2.Условие. Если нужно поддерживать IE 9 или IE 8 расскомментировать. Edge это не название браузера-->
+  <!-- <meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
   <meta name="format-detection" content="telephone=no">
+
+  <!--3.Условие. Нужна только после deploy сайта на сервер, когда будет известен домен. От content в og:image будет зависить как будет отображаться картинка (ссылка) на этот сайт в мобильном (в том числе на рабочем экране) или соцсетях-->
+  <meta property="og:image" content="path/to/image.jpg">
+
+  <!--4.Условие. Перед deploy убрать локальный адрес из url favicon и заменить на реальный адрес. В идеале они должны лежать на уровне index.html. И не забыть их сделать впринципе-->
+  <!-- <link rel="shortcut icon" type="image/x-icon" href="http://localhost:5555/img/favicon/favicon.ico" sizes="48x48">
+  <link rel="apple-touch-icon" href="http://localhost:5555/img/favicon/apple-touch-icon.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="http://localhost:5555/img/favicon/apple-touch-icon-72x72.png">
+	<link rel="apple-touch-icon" sizes="114x114" href="http://localhost:5555/img/favicon/apple-touch-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="http://localhost:5555/img/favicon/apple-touch-icon-152x152.png"> -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="http://localhost:5555/img/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="http://localhost:5555/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="http://localhost:5555/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/site.webmanifest">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <!--5.Условие. Как правило соответствует основному фоновыму оттенку body or brand - речь идет о цвете панели сайта в мобильном. Проверить можно только после deploy на сервер -->
+  <!-- Chrome, Firefox OS and Opera -->
+	<!-- <meta name="theme-color" content="#000"> -->
+	<!-- Windows Phone -->
+	<!-- <meta name="msapplication-navbutton-color" content="#000"> -->
+	<!-- iOS Safari -->
+	<!-- <meta name="apple-mobile-web-app-status-bar-style" content="#000"> -->
+
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-  <header class="page-header">
-    <nav class="main-nav main-nav--closed main-nav--nojs">
-      <button class="main-nav__toggle" type="button">Открыть меню</button>
-      <div class="main-nav__wrapper">
-        <ul class="main-nav__list">
-          <li class="main-nav__item main-nav__item--logo"><a>Лого</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="#">Главная</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="index-photo.html">Фотографии</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="index-form.html">Конкурс</a></li>
-          <li class="main-nav__item"><a class="main-nav__link" href="#">HTML Academy</a></li>
-        </ul>
+
+  <header class="header">
+    <div class="wrap__header">
+
+      <div class="header__logo">
+        <img src="img/logo.svg" alt="Школа Трафика" width="195" height="auto">
       </div>
-    </nav>
+
+      <div class="header__text">
+        <span class="header__text--sub-text">Видеокурс</span>
+        <h1>
+          <span class="header__text--quote-start">Вступление</span> в товарный
+          арбитраж <span class="header__text--quote-end">трафика</span>
+        </h1>
+        <p>Получи бесплатный видеокурс<br> по товарному арбитражу для новичков</p>
+      </div>
+
+      <form class="form" action="index.html" method="post">
+        <input type="email" name="" value="" placeholder="введите ваш e-mail" class="form__input" required>
+        <a href="#" class="btn form__btn" download="Курс">Скачать видео курс</a>
+      </form>
+
+    </div>
   </header>
 
-  <main class="page-main">
-    <section class="intro"></section>
 
-    <section class="app">
-      <div class="app__wrapper">
-        <h1 class="app__title">Взгляните<br> на жизнь<br> иначе!</h1>
-        <div class="app__btn">
-          <a href="#" class="app__download btn">Скачать приложение</a>
-        </div>
-        <nav class="app__nav">
-          <ul class="app__list">
-            <li class="app__item"><a href="#" class="app__icon app__icon--ios">iOS</a></li>
-            <li class="app__item"><a href="#" class="app__icon app__icon--and">Android</a></li>
-            <li class="app__item"><a href="#" class="app__icon app__icon--win">Windows</a></li>
-          </ul>
-        </nav>
-        <p class="app__text">
-          Доступно для iPhone, iPad, Android,<br> Windows Phone, OS X, Windows 8
-        </p>
-      </div>
-    </section>
+  <script src="js/script.min.js"></script>
 
-    <article class="benefit">
-      <header class="benefit__header">
-        <h1 class="benefit__title">Устали от серости мегаполиса?</h1>
-        <h1 class="benefit__title benefit__title--mobile-only">Нам есть, что вам предложить!</h1>
-      </header>
-      <div class="benefit__wrapper">
-        <section class="container">
-          <h2 class="container__title">Поднимает настроение</h2>
-          <p class="container__text">
-            Приложение позволит вам победить осеннюю хандру и депрессию буквально в несколько кликов!
-          </p>
-          <div class="container__img container__img--1">
-            <img src="css/img/index__ct__1-d.png" alt="">
-          </div>
-        </section>
-
-        <section class="container">
-          <h2 class="container__title">Меняет мир вокруг</h2>
-          <p class="container__text">
-            Сделайте снимок и украсьте его смайликом или текстовой подписью, чтобы усилить эффект
-          </p>
-          <div class="container__img container__img--2">
-            <img src="css/img/index__ct__2-d.png" alt="">
-          </div>
-        </section>
-
-        <section class="container">
-          <h2 class="container__title">Заводит новых друзей</h2>
-          <p class="container__text">
-            Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых
-          </p>
-          <div class="container__img container__img--3">
-            <picture>
-              <source media="(min-width: 1200px)" srcset="css/img/index__ct__3-d.png">
-              <source media="(min-width: 700px)" srcset="css/img/index__ct__3-t.png">
-              <img src="css/img/index__ct__3-m.png" alt="">
-            </picture>
-          </div>
-        </section>
-      </div>
-    </article>
-
-    <article class="ads">
-      <div class="ads__wrapper">
-        <h1 class="ads__title">Эффект на 24 часа!</h1>
-        <p class="ads__research">
-          Британские ученые провели исследования и доказали, что положительный эффект от использования приложения длится  целые сутки!
-        </p>
-        <a href="#" class="ads__link">Узнать больше об исследовании</a>
-      </div>
-    </article>
-
-    <div class="reviews">
-      <div class="reviews__wrapper">
-        <div class="slider">
-          <div class="slider__slide">
-            <blockquote class="slider__item">
-              <b class="reviews__author-name">Николай Петров</b>
-              <p class="reviews__author-about">25 лет, водитель трамвая</p>
-              <p class="reviews__author-text">
-                <span class="reviews__author-text reviews__author-text--desktop-only">«</span>Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!<span class="reviews__author-text reviews__author-text--desktop-only">»</span>
-              </p>
-            </blockquote>
-          </div>
-          <div class="slider__slide">
-            <blockquote class="slider__item">
-              <b class="reviews__author-name">Денис Мацуев</b>
-              <p class="reviews__author-about">How Much Is the Fish?</p>
-              <p class="reviews__author-text">
-                <span class="reviews__author-text reviews__author-text--desktop-only">«</span>
-                Hurray! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eligendi totam, asperiores sequi itaque modi maxime sit corporis unde culpa fugiat nulla vitae.
-                <span class="reviews__author-text reviews__author-text--desktop-only">»</span>
-              </p>
-            </blockquote>
-          </div>
-          <div class="slider__slide">
-            <blockquote class="slider__item">
-              <b class="reviews__author-name">Евгений Кисин</b>
-              <p class="reviews__author-about">How Much Is the Fish?</p>
-              <p class="reviews__author-text">
-                <span class="reviews__author-text reviews__author-text--desktop-only">«</span>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sint dolorum possimus voluptatibus, soluta consequuntur ipsa facere, molestiae, asperiores, saepe enim praesentium inventore alias. Error, et necessitatibus placeat debitis, laboriosam aperiam.
-                <span class="reviews__author-text reviews__author-text--desktop-only">»</span>
-              </p>
-            </blockquote>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="price">
-      <div class="price__wrapper">
-        <div class="slider-to-table">
-          <div class="slider-to-table__slide">
-            <div class="slider-to-table__item">
-              <ul class="price__list price__list--mobile-only">
-                <li class="price__item price__item--hidden">Условия</li>
-                <li class="price__item">Розовый фильтр</li>
-                <li class="price__item">Смайлики</li>
-                <li class="price__item">Комментарии</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="slider-to-table__slide">
-            <div class="slider-to-table__item">
-              <ul class="price__list">
-                <li class="price__header">База <span class="price__value">1,99 USD</span></li>
-                <li class="price__item">Розовый фильтр</li>
-                <li class="price__item">Смайлики</li>
-                <li class="price__item">Комментарии</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="slider-to-table__slide">
-            <div class="slider-to-table__item">
-              <ul class="price__list">
-                <li class="price__header price__header--standard">Стандарт <span class="price__value">3,99 USD</span></li>
-                <li class="price__item">Розовый фильтр</li>
-                <li class="price__item">Смайлики</li>
-                <li class="price__item">Комментарии</li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="slider-to-table__slide">
-            <div class="slider-to-table__item">
-              <ul class="price__list">
-                <li class="price__header">Анлим <span class="price__value">9,99 USD</span></li>
-                <li class="price__item">Розовый фильтр</li>
-                <li class="price__item">Смайлики</li>
-                <li class="price__item">Комментарии</li>
-              </ul>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </main>
-
-  <footer class="page-footer">
-    <section class="contacts">
-      <div class="contacts__wrapper">
-        <h1 class="contacts__header">Остались вопросы? Свяжитесь с нами!</h1>
-
-        <div class="contacts__info">
-          <b class="contacts__title">Звоните:</b>
-          <a href="" class="contacts__item">+7 (812) 555-66-66</a>
-        </div>
-
-        <div class="contacts__info">
-          <b class="contacts__title">Пишите:</b>
-          <a href="mailto:" class="contacts__item contacts__item--link">mail@htmlacademy.ru</a>
-        </div>
-
-        <div class="contacts__info">
-          <b class="contacts__title">Приезжайте в гости:</b>
-          <p class="contacts__item">ул. Большая Конюшенная, 19/8</p>
-        </div>
-      </div>
-      <div class="map"></div>
-    </section>
-    <div class="footer">
-      <div class="footer__wrapper">
-        <div class="social-media">
-          <ul class="social-media__list">
-            <li class="social-media__item">
-              <a href="https://vk.com/htmlacademy" class="social-media__link social-media__link--tw">Twitter</a>
-            </li>
-            <li class="social-media__item">
-              <a href="https://facebook.com/htmlacademy" class="social-media__link social-media__link--fb">Facebook</a>
-            </li>
-            <li class="social-media__item">
-              <a href="https://instagram.com/htmlacademy" class="social-media__link social-media__link--yt">Youtube</a>
-            </li>
-          </ul>
-        </div>
-        <div class="copyright">
-          <p class="copyright__text">
-            Разработано
-            <a href="https://htmlacademy.ru/intensive/adaptive" class="copyright__link">HTML Academy</a>
-          </p>
-        </div>
-      </div>
-    </div>
-  </footer>
-  <script type="text/javascript" src="https://yastatic.net/jquery/2.1.3/jquery.min.js"></script>
-  <script type="text/javascript" src="slick/slick.min.js"></script>
-  <script type="text/javascript" src="js/script.js"></script>
-  <script type="text/javascript" src="js/custom.js"></script>
 </body>
 </html>
