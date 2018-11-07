@@ -16,7 +16,6 @@ gulpfile.js
 *.psd
 *.ai
 *.pdf
-css/*.css
 *.7z
 *.dmg
 *.gz
